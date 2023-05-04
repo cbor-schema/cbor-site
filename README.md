@@ -1,11 +1,11 @@
-# CBOR Docs (WIP)
+# CBOR Schema Workgroup Website
 
 ---
 
 ## Overview
 
 This repository contains the contents for the CBOR Schema Documentations
-deployed at [https://docs.cbor.ai](https://docs.cbor.ai).
+deployed at [https://cbor.ai](https://cbor.ai) by [cbor-schema.github.io](https://github.com/cbor-schema/cbor-schema.github.io).
 
 The site is built using [Docusaurus 2](https://docusaurus.io/).
 
@@ -24,8 +24,6 @@ image files for a doc.
 uses a series of style checking and formatting tools. See
 [style-checker-notes.md](style-checker-notes.md) for more details and how to fix errors.
 - Extensive docs for Docusaurus can be found [here](https://docusaurus.io/docs).
-
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
 ### Installation
 

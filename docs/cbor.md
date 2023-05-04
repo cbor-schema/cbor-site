@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# CBOR 中文文档
+# CBOR 规范（WIP）
 
 本文翻译自 RFC8949：[Concise Binary Object Representation (CBOR)](https://datatracker.ietf.org/doc/html/rfc8949).
 

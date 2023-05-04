@@ -1,6 +1,6 @@
 {
-  "name": "cbor-docs",
-  "version": "0.0.1",
+  "name": "cbor-site",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",

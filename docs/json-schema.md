@@ -156,7 +156,7 @@ JSON Schema 根据数据模型解释文档。根据这个数据模型解释的 J
 
 Two JSON instances are said to be equal if and only if they are of the same type and have the same value according to the data model. Specifically, this means:
 
-```text
+```txt
 both are null; or
 both are true; or
 both are false; or
@@ -171,7 +171,7 @@ Implied in this definition is that arrays must be the same length, objects must 
 
 如果两个 JSON 实例具有相同的类型，并根据数据模型具有相同的值，则它们被认为是相等的。具体来说，这意味着：
 
-```text
+```txt
 两者都是 null；或
 两者都是 true；或
 两者都是 false；或
@@ -222,7 +222,7 @@ JSON Schema 必须是一个对象（object）或布尔值（boolean）。
 
 Object properties that are applied to the instance are called keywords, or schema keywords. Broadly speaking, keywords fall into one of five categories:
 
-```text
+```txt
 identifiers: control schema identification through setting a URI for the schema and/or changing how the base URI is determined
 assertions: produce a boolean result when applied to an instance
 annotations: attach information to an instance for application use
@@ -243,7 +243,7 @@ An empty schema is a JSON Schema with no properties, or only unknown properties.
 
 应用于实例的对象属性称为关键字（keywords）或模式关键字（schema keywords）。大致上，关键字可分为五类：
 
-```text
+```txt
 标识符（identifiers）：通过为模式设置 URI 和/或更改 base URI 的确定方式来控制模式识别
 断言（assertions）：在应用于实例时产生布尔结果
 注解（annotations）：为应用程序使用附加信息到实例
@@ -440,7 +440,7 @@ Regular expressions SHOULD be built with the "u" flag (or equivalent) to provide
 
 Furthermore, given the high disparity in regular expression constructs support, schema authors SHOULD limit themselves to the following regular expression tokens:
 
-```text
+```txt
 individual Unicode characters, as defined by the JSON specification RFC 8259;
 simple character classes ([abc]), range character classes ([a-z]);
 complemented character classes ([^abc], [^a-z]);
@@ -1700,7 +1700,7 @@ It is RECOMMENDED that instances described by a schema provide a link to a downl
 
 In HTTP, such links can be attached to any response using the Link header [RFC8288]. An example of such a header would be:
 
-```text
+```txt
 Link: <https://example.com/my-hyper-schema>; rel="describedby"
 ```
 
@@ -1710,7 +1710,7 @@ Link: <https://example.com/my-hyper-schema>; rel="describedby"
 
 在 HTTP 中，这样的链接可以使用 Link 头 [RFC8288] 附加到任何响应。这样一个头的示例是：
 
-```text
+```txt
 Link: <https://example.com/my-hyper-schema>; rel="describedby"
 ```
 
@@ -1725,7 +1725,7 @@ HTTP servers SHOULD set long-lived caching headers on JSON Schemas. HTTP clients
 
 Clients SHOULD set or prepend a User-Agent header specific to the JSON Schema implementation or software product. Since symbols are listed in decreasing order of significance, the JSON Schema library name/version should precede the more generic HTTP library name (if any). For example:
 
-```text
+```txt
 User-Agent: product-name/5.4.1 so-cool-json-schema/1.0.2 curl/7.43.0
 ```
 
@@ -1738,7 +1738,7 @@ HTTP 服务器应（SHOULD）在 JSON 模式上设置长期缓存头。HTTP 客�
 
 客户端应（SHOULD）设置或添加特定于 JSON 模式实现或软件产品的 User-Agent 头。由于符号按照重要性递减的顺序排列，JSON 模式库名称/版本应位于更通用的 HTTP 库名称（如果有的话）之前。例如：
 
-```text
+```txt
 User-Agent: product-name/5.4.1 so-cool-json-schema/1.0.2 curl/7.43.0
 ```
 
@@ -2336,7 +2336,7 @@ Implementations MAY elect to provide additional information.
 
 The relative location of the validating keyword that follows the validation path. The value MUST be expressed as a JSON Pointer, and it MUST include any by-reference applicators such as "$ref" or "$dynamicRef".
 
-```text
+```txt
 /properties/width/$ref/minimum
 ```
 
@@ -2347,7 +2347,7 @@ The JSON key for this information is "keywordLocation".
 
 验证关键字的相对位置，遵循验证路径。该值必须（MUST）表示为 JSON Pointer，并且必须（MUST）包括 `$ref` 或 `$dynamicRef` 等引用定位器。
 
-```text
+```txt
 /properties/width/$ref/minimum
 ```
 
@@ -2362,7 +2362,7 @@ The JSON key for this information is "keywordLocation".
 
 The absolute, dereferenced location of the validating keyword. The value MUST be expressed as a full URI using the canonical URI of the relevant schema resource with a JSON Pointer fragment, and it MUST NOT include by-reference applicators such as "$ref" or "$dynamicRef" as non-terminal path components. It MAY end in such keywords if the error or annotation is for that keyword, such as an unresolvable reference. Note that "absolute" here is in the sense of "absolute filesystem path" (meaning the complete location) rather than the "absolute-URI" terminology from RFC 3986 (meaning with scheme but without fragment). Keyword absolute locations will have a fragment in order to identify the keyword.
 
-```text
+```txt
 https://example.com/schemas/common#/$defs/count/minimum
 ```
 
@@ -2373,7 +2373,7 @@ The JSON key for this information is "absoluteKeywordLocation".
 
 验证关键字的绝对、取消引用的位置。该值必须（MUST）表示为一个完整的 URI，使用相关模式资源的规范 URI 和一个 JSON Pointer 片段表示，且不得（MUST NOT）将 `$ref` 或 `$dynamicRef` 等引用定位器作为非终端路径组件包括在内。如果错误或注释针对的是该关键字，例如无法解析的引用，则可能（MAY）以这样的关键字结束。请注意，这里的“绝对”是指“绝对文件系统路径”（absolute filesystem path）（意味着完整位置），而不是 RFC 3986 中的 `absolute-URI` 术语（意味着带有方案但没有片段）。关键字绝对位置将具有一个片段以便识别关键字。
 
-```text
+```txt
 https://example.com/schemas/common#/$defs/count/minimum
 ```
 
@@ -2929,7 +2929,7 @@ A malicious schema author could place executable code or other dangerous materia
 ## 15. References（略，见原文）
 ## Appendix（略，见原文）
 
-原文：[JSON Schema: A Media Type for Describing JSON Documents](https://json-schema.org/draft/2020-12/json-schema-core.html)
+## 原文：[JSON Schema: A Media Type for Describing JSON Documents](https://json-schema.org/draft/2020-12/json-schema-core.html)
 
 [RFC2119]: https://datatracker.ietf.org/doc/html/rfc2119
 [RFC3986]: https://datatracker.ietf.org/doc/html/rfc3986

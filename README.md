@@ -1,4 +1,4 @@
-# CBOR Schema Workgroup Website
+# CBOR Schema Working Group Website
 
 ---
 

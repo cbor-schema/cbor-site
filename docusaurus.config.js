@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'CBOR Schema Workgroup',
+  title: 'CBOR Schema Working Group',
   tagline: 'CBOR is a data format whose design goals include the possibility of extremely small code size, fairly small message size, and extensibility without the need for version negotiation.',
   favicon: 'img/favicon.ico',
 
@@ -123,7 +123,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} CBOR Schema Workgroup. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} CBOR Schema Working Group. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
